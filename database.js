@@ -10,5 +10,5 @@ mongoose.connect(db_url,{
 },(error, list)=>{
      assert.equal(error,null,"Error in BD Connection")
      console.log("DB Connected...");
-     console.log(list)
+  //   console.log(list)
 })
