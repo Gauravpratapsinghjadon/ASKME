@@ -71,7 +71,7 @@ router.put('/answer', [
 
 
 router.get('/', (req, res) => {
-    Question.find((err, result) => {
+    Question.aggregate((err, result) => {
         if (err) {
             return res.status(422).json({
                 message: "success",
@@ -84,7 +84,7 @@ router.get('/', (req, res) => {
             status: 200,
             data: result
         })
-    })
+    }).sort({question: 1 }).exec();
 })
 
 router.get('/:id', (req, res) => {

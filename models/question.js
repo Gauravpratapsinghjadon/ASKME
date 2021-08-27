@@ -15,5 +15,5 @@ const questionSchema = mongoose.Schema({
     }]
 })
 
-mongoose.model("questions", questionSchema)
-module.exports = mongoose.model('questions')
+const nn =mongoose.model("questions", questionSchema)
+module.exports = nn
